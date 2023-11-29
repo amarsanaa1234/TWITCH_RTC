@@ -1,0 +1,24 @@
+.main{ 
+    padding-top: 80px;
+    background-color: #040D12;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.main_title{
+    width: 50%;
+}
+.main_title h1{
+    align-self: center;
+    text-align: center;
+    padding-left: 0;
+    line-height: 1.1;
+    font-size: 4.2rem;
+    font-weight: 700;
+    display: flex;
+    text-shadow: 2px 2px 10px #845695;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}

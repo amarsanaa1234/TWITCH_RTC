@@ -1,0 +1,32 @@
+.header{
+    width: 100vw;
+    position: fixed;
+    height: 80px;
+    background-color: #001524;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_frame{
+    margin-left: 40px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.header_group_button{
+    display: flex;
+    gap: 25px;
+    margin-right: 40px;
+}
+.header_button{
+    padding: 15px;
+    background-color: #DF826C;
+    border-radius: 25px;
+    border: 0px;
+}
+.aTag{
+    color: #F0ECE5;
+    text-decoration: none;
+    font-weight: 700;
+}

@@ -81,8 +81,6 @@ const RoomPage = () => {
     }
   }, [remoteSocketId, socket, peer]);
   
-  // ... (rest of your code)
-  
   const handleNegoNeedFinal = useCallback(
     async ({ ans }) => {
       try {
@@ -128,21 +126,23 @@ const RoomPage = () => {
 
   return (
     <div>
-      <h1>Room Page</h1>
+      <h1>Streaming Room</h1>
       <h4>{remoteSocketId ? "Connected" : "No one in room"}</h4>
       {myStream && <button onClick={sendStreams}>Send Stream</button>}
-      {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
+      {remoteSocketId && <button onClick={handleCallUser}>Start</button>}
       {myStream && (
         <>
           <h1>My Stream</h1>
           <ReactPlayer
             playing
             muted
-            height="100px"
-            width="200px"
+            height="500px"
+            width="500px"
+            controls={true}
             url={myStream}
           />
         </>
+
       )}
       {remoteStream && (
         <>
@@ -150,8 +150,9 @@ const RoomPage = () => {
           <ReactPlayer
             playing
             muted
-            height="100px"
-            width="200px"
+            height="500px"
+            width="500px"
+            controls={true}
             url={remoteStream}
           />
         </>

@@ -1,10 +1,8 @@
 import {Routes, Route} from 'react-router-dom';
 import './App.css';
-import LobbyScreen from './screens/Lobby';
-import RoomScreen from './screens/Room';
-import Header from './screens/Header';
-import Main from './screens/Main';
-import Footer from './screens/Footer';
+import LobbyScreen from './screens/lobby/Lobby';
+import RoomScreen from './screens/room/Room';
+import Main from './screens/main/Main';
 
 function App() {
   return (

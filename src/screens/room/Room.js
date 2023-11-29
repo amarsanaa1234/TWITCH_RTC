@@ -1,7 +1,9 @@
+import './room.css'
 import React, { useEffect, useCallback, useState } from "react";
 import ReactPlayer from "react-player";
-import peer from "../service/peer";
-import { useSocket } from "../context/SocketProvider";
+import peer from "../../service/peer";
+import { useSocket } from "../../context/SocketProvider";
+import Header from '../header/Header';
 
 const RoomPage = () => {
   const socket = useSocket();
@@ -125,38 +127,53 @@ const RoomPage = () => {
   ]);
 
   return (
-    <div>
-      <h1>Streaming Room</h1>
-      <h4>{remoteSocketId ? "Connected" : "No one in room"}</h4>
-      {myStream && <button onClick={sendStreams}>Send Stream</button>}
-      {remoteSocketId && <button onClick={handleCallUser}>Start</button>}
-      {myStream && (
-        <>
-          <h1>My Stream</h1>
-          <ReactPlayer
-            playing
-            muted
-            height="500px"
-            width="500px"
-            controls={true}
-            url={myStream}
-          />
-        </>
+    <div className='room'>
+      <Header/>
+      <div className='room_frame'>
+        <div className='room_navbar'>
+          <div className='room_navbar_status'>
+            <h2>Participants</h2>
+            <h2 className='room_active_status'>0</h2>
+          </div>
+        </div>
+        <div className='room_streaming'>
+          {myStream && (
+            <>
+              <h1>My Stream</h1>
+              <div div className='room_camera_frame'>
+              <ReactPlayer
+                playing
+                muted
+                width={336}
+                className='room_camera'
+                url={myStream}
+              />
+              </div>
+            </>
 
-      )}
-      {remoteStream && (
-        <>
-          <h1>Remote Stream</h1>
-          <ReactPlayer
-            playing
-            muted
-            height="500px"
-            width="500px"
-            controls={true}
-            url={remoteStream}
-          />
-        </>
-      )}
+          )}
+          {remoteStream && (
+            <>
+              <h1>Remote Stream</h1>
+              <ReactPlayer
+                playing
+                muted
+                height="500px"
+                width="500px"
+                controls={true}
+                url={remoteStream}
+              />
+            </>
+          )}
+          <h4>{remoteSocketId ? "Connected" : "No one in room"}</h4>
+          {myStream && <button className='Lobby_button' onClick={sendStreams}>Send Stream</button>}
+          {remoteSocketId && <button className='Lobby_button' onClick={handleCallUser}>Эхлүүлэх</button>}
+          
+        </div>
+        <div className='room_chat'>
+          
+        </div>
+      </div>
     </div>
   );
 };

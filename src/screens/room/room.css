@@ -1,0 +1,62 @@
+.room{
+    background-color: #001524;
+    height: 100vh;
+}
+.room_frame{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.room_navbar{
+    width: 15%;
+    background-color: #040D12;
+    height: 100%;
+}
+.room_navbar_status{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #3F72AF;
+}
+.room_active_status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #040D12;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+.room_streaming{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.room_streaming h4{
+    padding-top: 80px;
+}
+.room_chat{
+    width: 25%;
+    height: 100%;
+    background-color: #040D12;
+}
+.room_camera_frame{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.room_camera{
+    position: absolute;
+    left: -43px;
+    top: -55px;
+    transform: rotateY(180deg);
+    object-fit: cover;
+}

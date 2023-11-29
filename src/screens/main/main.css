@@ -1,7 +1,7 @@
 .main{ 
     padding-top: 80px;
     background-color: #040D12;
-    height: 500px;
+    height: 80vh;
     display: flex;
     align-items: center;
     width: 100%;
@@ -21,4 +21,10 @@
     align-items: center;
     position: relative;
     z-index: 1;
+}
+.main_img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

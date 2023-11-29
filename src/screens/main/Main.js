@@ -1,7 +1,9 @@
 import React from 'react'
 import './main.css';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
+import mainImg from '../../img/mainImg.png'
+
 function Main() {
   return (
     <>
@@ -11,9 +13,7 @@ function Main() {
                 <h1>Интерактив чат, дамжуулалт</h1>
             </div>
             <div className='main_img'>
-                <img
-
-                />
+                <img src={mainImg} alt="image" width={400} height={500}/>
             </div>
         </div>
         <Footer/>

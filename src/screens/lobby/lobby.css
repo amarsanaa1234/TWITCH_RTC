@@ -1,0 +1,49 @@
+
+.Lobby_form_frame{
+    width: 100vw;
+    height: 100vh;
+    background-color: #001524;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Lobby_form{
+    width: 600px;
+    height: 500px;
+    background-color: #222831;
+    border-radius: 15px;
+}
+.Lobby_form h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    margin: 0;
+    background-color: #393E46;
+    border-radius: 15px 15px 0px 0px;
+}
+form{
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    gap: 20px;
+    padding: 0 40px;
+}
+input{
+    border-radius: 8px;
+    height: 40px;
+    border: 0px;
+    background-color: #393E46;
+}
+.Lobby_button{
+    font-size: 20px;
+    font-weight: 700;
+    color: #F0ECE5;
+    padding: 15px;
+    background-color: #F67599;
+    border-radius: 25px;
+    border: 0px;
+}

@@ -50,6 +50,7 @@ function Lobby() {
               onChange={(e) => setEmail(e.target.value)}/>
             <label htmlFor='text'>Өрөөний нэр</label>
             <input 
+              autocomplete="off"
               placeholder='Өрөөний тоо эсвэл нэрийг оруулна уу?'
               type="text"
               id='room'

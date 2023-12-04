@@ -37,6 +37,9 @@ input{
     height: 40px;
     border: 0px;
     background-color: #393E46;
+    color: white;
+    outline: none;
+    padding-left: 25px;
 }
 .Lobby_button{
     font-size: 20px;
